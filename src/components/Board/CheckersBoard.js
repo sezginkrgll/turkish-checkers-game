@@ -53,6 +53,7 @@ function CheckersBoard() {
                 w={"50px"}
                 h={"50px"}
                 bg={"green.100"}
+                cursor={"pointer"}
                 onClick={() =>
                   dispatch(moveStamp({ row: y, col: x, value: value }))
                 }
@@ -63,6 +64,7 @@ function CheckersBoard() {
                 w={"50px"}
                 h={"50px"}
                 bg={"green.100"}
+                cursor={"pointer"}
                 onClick={() =>
                   dispatch(moveStamp({ row: y, col: x, value: value }))
                 }
@@ -73,6 +75,7 @@ function CheckersBoard() {
                 w={"42px"}
                 h={"42px"}
                 m={"4px"}
+                cursor={"pointer"}
                 bg={value.startsWith("white") ? "gray.100" : "gray.700"}
                 borderWidth={isSelectedStamp(y, x) ? "3px" : ""}
                 borderColor={"green.300"}
