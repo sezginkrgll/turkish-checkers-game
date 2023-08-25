@@ -8,7 +8,7 @@ import Alert from "./Alert";
 import Footer from "./Footer";
 function Container() {
   return (
-    <Box>
+    <Box w={"454px"} ml={"auto"} mr={"auto"} mt={"55px"}>
       <Header />
       <Board />
       <Alert />

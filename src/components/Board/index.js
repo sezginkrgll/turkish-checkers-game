@@ -5,7 +5,7 @@ import Turn from "./Turn";
 import CheckersBoard from "./CheckersBoard";
 function Board() {
   return (
-    <Box name="board" w={"454px"} ml={"auto"} mr={"auto"} mt={"20px"}>
+    <Box name="board" mt={"20px"}>
       <Flex>
         <Grid
           templateRows="repeat(8, 1fr)"

@@ -3,7 +3,7 @@ import React from "react";
 
 function Header() {
   return (
-    <Heading fontSize={"3xl"} textAlign={"center"} mt={"55px"}>
+    <Heading fontSize={"3xl"} textAlign={"center"}>
       Turkish Checkers Game
     </Heading>
   );

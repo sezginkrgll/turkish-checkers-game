@@ -7,7 +7,10 @@ function Footer() {
       <Flex mt={"25px"}>
         <Spacer />
         <Box mr={"20px"}>
-          <Link>
+          <Link
+            href="https://github.com/sezginkrgll/turkish-checkers-game"
+            target="_blank"
+          >
             <svg
               height="32"
               aria-hidden="true"
