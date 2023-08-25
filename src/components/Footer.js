@@ -40,7 +40,7 @@ function Footer() {
         <Spacer />
       </Flex>
       <Text textAlign="center" fontSize="xs" mt={"10px"}>
-        2023, created by Sezgin Karagülle
+        2023 created by Sezgin Karagülle
       </Text>
     </Box>
   );
