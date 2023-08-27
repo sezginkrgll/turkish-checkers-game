@@ -25,7 +25,7 @@ const createRoute = (stamp, cb) => {
     if (!stamp.value.includes("king")) {
       // if the cell is not empty
       if (cb[row][stamp.col] !== null) {
-        // If the player's stamp encounters an rival stamp
+        // If the player's stamp encounters a rival stamp
         if (cb[row][stamp.col].startsWith(rival)) {
           if (cb[row - 1][stamp.col] === null) {
             cb[row - 1][stamp.col] = "capture";
@@ -43,8 +43,12 @@ const createRoute = (stamp, cb) => {
       if (stamp.value.startsWith(cb[row][stamp.col])) {
         break;
       }
-      // If the player's stamp encounters an rival stamp
+      // If the player's stamp encounters a rival stamp
       if (cb[row][stamp.col].startsWith(rival)) {
+        // if over of table's border
+        if (row - 1 < 0) {
+          break;
+        }
         if (cb[row - 1][stamp.col] === null) {
           cb[row - 1][stamp.col] = "capture";
           captureUp = true;
@@ -71,7 +75,7 @@ const createRoute = (stamp, cb) => {
     if (!stamp.value.includes("king")) {
       // if the cell is not empty
       if (cb[row][stamp.col] !== null) {
-        // If the player's stamp encounters an rival stamp
+        // If the player's stamp encounters a rival stamp
         if (cb[row][stamp.col].startsWith(rival)) {
           if (cb[row + 1][stamp.col] === null) {
             cb[row + 1][stamp.col] = "capture";
@@ -89,8 +93,12 @@ const createRoute = (stamp, cb) => {
       if (stamp.value.startsWith(cb[row][stamp.col])) {
         break;
       }
-      // If the player's stamp encounters an rival stamp
+      // If the player's stamp encounters a rival stamp
       if (cb[row][stamp.col].startsWith(rival)) {
+        // if over of table's border
+        if (row + 1 > 7) {
+          break;
+        }
         if (cb[row + 1][stamp.col] === null) {
           cb[row + 1][stamp.col] = "capture";
           captureDown = true;
@@ -113,7 +121,7 @@ const createRoute = (stamp, cb) => {
     if (!stamp.value.includes("king")) {
       // if the cell is not empty
       if (cb[stamp.row][col] !== null) {
-        // If the player's stamp encounters an rival stamp
+        // If the player's stamp encounters a rival stamp
         if (cb[stamp.row][col].startsWith(rival)) {
           if (cb[stamp.row][col + 1] === null) {
             cb[stamp.row][col + 1] = "capture";
@@ -131,8 +139,12 @@ const createRoute = (stamp, cb) => {
       if (stamp.value.startsWith(cb[stamp.row][col])) {
         break;
       }
-      // If the player's stamp encounters an rival stamp
+      // If the player's stamp encounters a rival stamp
       if (cb[stamp.row][col].startsWith(rival)) {
+        // if over of table's border
+        if (col + 1 > 7) {
+          break;
+        }
         if (cb[stamp.row][col + 1] === null) {
           cb[stamp.row][col + 1] = "capture";
           captureRight = true;
@@ -155,7 +167,7 @@ const createRoute = (stamp, cb) => {
     if (!stamp.value.includes("king")) {
       // if the cell is not empty
       if (cb[stamp.row][col] !== null) {
-        // If the player's stamp encounters an rival stamp
+        // If the player's stamp encounters a rival stamp
         if (cb[stamp.row][col].startsWith(rival)) {
           if (cb[stamp.row][col - 1] === null) {
             cb[stamp.row][col - 1] = "capture";
@@ -173,8 +185,12 @@ const createRoute = (stamp, cb) => {
       if (stamp.value.startsWith(cb[stamp.row][col])) {
         break;
       }
-      // If the player's stamp encounters an rival stamp
+      // If the player's stamp encounters a rival stamp
       if (cb[stamp.row][col].startsWith(rival)) {
+        // if over of table's border
+        if (col - 1 < 0) {
+          break;
+        }
         if (cb[stamp.row][col - 1] === null) {
           cb[stamp.row][col - 1] = "capture";
           captureLeft = true;
